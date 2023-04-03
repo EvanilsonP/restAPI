@@ -1,7 +1,7 @@
 module.exports = {
     HOST: 'localhost',
     USER: 'root',
-    PASSWORD: '',
+    PASSWORD: '88813091a',
     DB: 'node_sequelize_api_db',
     dialect: 'mysql',
 

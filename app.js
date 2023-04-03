@@ -9,11 +9,11 @@ var corOptions = {
 // middleware
 app.use(cors(corOptions));
 app.use(express.json());
-app.use(express.urlencoded({ urlencoded: true }));
+app.use(express.urlencoded({ urlencoded: true }))
 
 // routes
 const router = require('./routes/productRoutes');
-app.use('/api/products', router);
+app.use(router);
 
 // testing API
 app.get('/', (req, res) => {
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 // PORT
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 // server
 app.listen(PORT, () => console.log('Up and running.'));
