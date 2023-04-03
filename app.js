@@ -11,6 +11,10 @@ app.use(cors(corOptions));
 app.use(express.json());
 app.use(express.urlencoded({ urlencoded: true }));
 
+// routes
+const router = require('./routes/productRoutes');
+app.use('/api/products', router);
+
 // testing API
 app.get('/', (req, res) => {
     res.json({ message: 'hello from API '});
